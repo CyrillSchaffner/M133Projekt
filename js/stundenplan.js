@@ -1,7 +1,6 @@
 
 $( document ).ready(function() {
-    console.log("stundenplan.js");
-
+    // appends select
     $('#berufe').append('<select class="btn btn-primary btn-light dropdown-toggle"></select>')
 
     const weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
@@ -73,7 +72,7 @@ $( document ).ready(function() {
                     $('#klassen').append('<br><label>Keine Klassen</label>');
                 }
             }).error(function() {
-                $('#klassen').empty();
+                $('#klassen').empty().append('<br><label>Keine Klassen</label>');
         });
     }
 
@@ -91,19 +90,19 @@ $( document ).ready(function() {
                 .done(function(response) {
                     console.log(response);
                     if (response) {
-                        $('#tafel').empty();
+                        $('#tafel table').empty();
 
-                        $('#tafel').append('<table class="table"><thead></thead><tbody></tbody></table>')
-                        $('#tafel thead').append(
+                        $('#tafel table').append('<thead class="thead-dark"></thead><tbody></tbody>')
+                        $('#tafel table thead').append(
                             '<tr>' +
-                            '<td scope="col">Datum</td>' +
-                            '<td scope="col">Wochentag</td>' +
-                            '<td scope="col">Von</td>' +
-                            '<td scope="col">Bis</td>' +
-                            '<td scope="col">Fach</td>' +
-                            '<td scope="col">Lehrer</td>' +
-                            '<td scope="col">Raum</td>' +
-                            '<td scope="col">Kommentar</td>' +
+                            '<td>Datum</td>' +
+                            '<td>Wochentag</td>' +
+                            '<td>Von</td>' +
+                            '<td>Bis</td>' +
+                            '<td>Fach</td>' +
+                            '<td>Lehrer</td>' +
+                            '<td>Raum</td>' +
+                            '<td>Kommentar</td>' +
                             '</tr>'
                         );
 
