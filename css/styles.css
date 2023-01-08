@@ -1,4 +1,18 @@
 
 * {
-    color: black;
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    padding: 15px ;
+    background-color: black;
+}
+
+mb-0 p-2 previous-weekpicker1 fa fa-chevron-left {
+    cursor: pointer;
 }
